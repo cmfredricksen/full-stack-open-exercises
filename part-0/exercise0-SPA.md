@@ -54,8 +54,8 @@ sequenceDiagram
     Note right of b: Event Listener creates a new_note
     Note right of b: Event Listener pushes new_note to local data array
 
-    Note right of b: Redraw the page & display the new_note, data
-    Note right of b: Send new_note via Post Request to Server
+    Note right of b: Event Listener redraws the page & displays the new_note, data
+    Note right of b: Event Listener sends new_note via Post Request to Server
     end
     deactivate b
     b->>s: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
