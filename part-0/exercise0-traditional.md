@@ -68,6 +68,6 @@ sequenceDiagram
     s-->>b: Data.json
     deactivate s
 
-    Note right of b:Browser executes the event handler which renders the code and the form to add a note
+    Note right of b: Browser executes JS event handler which renders the new data to the page
 
 ```
