@@ -10,24 +10,24 @@ sequenceDiagram
 
     b->>s: HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
     activate s
-    s-->>b: HTML document
+    s-->>b: HTML document 200
     deactivate s
 
     b->>s: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
     activate s
-    s-->>b: main.css
+    s-->>b: main.css 200
     deactivate s
 
     b->>s: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.js
     activate s
-    s-->>b: main.js
+    s-->>b: main.js 200
     deactivate s
 
     Note over b, s: Browser starts executing JS code - fetches JSON data from the server
 
     b->>s: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
     activate s
-    s-->>b: data.json
+    s-->>b: data.json 200
     deactivate s
 
     Note right of b: The browser executes the callback function and renders the notes
@@ -49,23 +49,23 @@ sequenceDiagram
     Note over b, s: HTTP Redirect 302
     activate s
     b->>s: HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
-    s-->>b: Return HTML
+    s-->>b: Return HTML 200
     deactivate s
 
     b->>s: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
     activate s
-    s-->>b: main.css
+    s-->>b: main.css 200
     deactivate s
 
     b->>s: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.js
     activate s
-    s-->>b: main.js
+    s-->>b: main.js 200
     deactivate s
 
     Note right of b: Browser executes JS that requests JSON data from the server
     b->>s: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
     activate s
-    s-->>b: Data.json
+    s-->>b: Data.json 200
     deactivate s
 
     Note right of b: Browser executes JS event handler which renders the new data to the page

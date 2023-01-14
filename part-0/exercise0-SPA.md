@@ -11,24 +11,24 @@ sequenceDiagram
 
     b->>s: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa
     activate s
-    s-->>b: HTML document spa
+    s-->>b: HTML document spa 200
     deactivate s
 
     b->>s: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
     activate s
-    s-->>b: main.css
+    s-->>b: main.css 200
     deactivate s
 
     b->>s: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.js
     activate s
-    s-->>b: main.js
+    s-->>b: main.js 200
     deactivate s
 
     Note over b, s: Browser starts executing JS code - fetches JSON data from the server
 
     b->>s: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
     activate s
-    s-->>b: data.json
+    s-->>b: data.json 200
     deactivate s
 
     Note right of b: The browser executes the callback function and renders the notes
